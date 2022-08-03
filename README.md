@@ -34,6 +34,7 @@ To be able to log in as root edit `$PREFIX/etc/ssh/sshd_config` and add `PermitR
 
 ### rclone
 `rclone ls remote:` - list files in root directory of remote drive called `remote`  
+`rclone mount remote: /sdcard/rclone --daemon --allow-root --vfs-cache-mode writes` - mount remote: drive as a VFS, the second argument specifies the full path to an empty folder on the local filesystem that can be used as an entry point  
 
 ## termux packages
 * tsu  
