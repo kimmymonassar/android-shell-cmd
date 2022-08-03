@@ -35,6 +35,10 @@ To be able to log in as root edit `$PREFIX/etc/ssh/sshd_config` and add `PermitR
 ### rclone
 `rclone ls remote:` - list files in root directory of remote drive called `remote`  
 `rclone mount remote: /sdcard/rclone --daemon --allow-root --vfs-cache-mode writes` - mount remote: drive as a VFS, the second argument specifies the full path to an empty folder on the local filesystem that can be used as an entry point  
+`rclone move source:path dest:path` - move files from source to dest, use `--progress` flag to show real time statistics`  
+`rclone moveto source:path dest:path` - move single files from source to dest, also has support for progress flag  
+
+View [rclone docs](https://rclone.org/commands) for more useful commands    
 
 ## termux packages
 * tsu  
