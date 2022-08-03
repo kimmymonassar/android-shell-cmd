@@ -3,8 +3,8 @@
 ## adb
 adb shell  
 adb cmd package list-packages  
-adb shell am start -n com.termux/.HomeActivity - any apk  
-adb shell input text <text> - encode spaces to %s  
+adb shell am start -n com.termux/.HomeActivity - launch any apk  
+adb shell input text "text" - encode spaces to %s  
 adb shell input keyevent ENTER  
 
 ## termux / shell
@@ -49,7 +49,7 @@ setupgcc-11 (to switch back to using clang run setupclang)
 setup-patchforgcc  
 
 ### gcc usage
-**printf "#include <stdio.h>\nint main (void)\n{\n  printf(\"Hello World\");\n  return 0;\n}" > hello.c**  
+**printf "#include <stdio.h>\n\nint main (void)\n{\n  printf(\"Hello World\");\n  return 0;\n}" > hello.c**  
 use vim/nano to write ur code: **vim hello.c**  
 **gcc hello.c -o output -D__BIONIC_VERSIONER**  
 finally run the compiled output file: **./hello**  
