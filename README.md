@@ -8,6 +8,8 @@ adb shell input text <text> - encode spaces to %s
 adb shell input keyevent ENTER  
 
 ## termux / shell
+pkg update && pkg upgrade -y  
+pkg autoclean  
 whoami  
 pwd  
 logcat -s "sshd:*" - any  
@@ -35,3 +37,19 @@ openssh
 gcc (needs its-pointless repo)  
 metasploit (needs pkg install unstable-repo)  
 docker (and docker-compose)  
+git  
+
+## gcc compiler
+echo "deb https://its-pointless.github.io/files/24 termux extras" > $PREFIX/etc/apt/sources.list.d/pointless.list - (for android 5 & 6 use 21 instead of 24)  
+apt-get install gnupg  
+curl -fsSL https://its-pointless.github.io/pointless.gpg | sudo apt-key --keyring /etc/apt/trusted.gpg.d/pointless.gpg add  
+apt-get update  
+apt-get install gcc-11  
+setupgcc-11 (to switch back to using clang run setupclang)
+setup-patchforgcc  
+
+### gcc usage
+**printf "#include <stdio.h>\nint main (void)\n{\n  printf(\"Hello World\");\n  return 0;\n}" > hello.c**  
+use vim/nano to write ur code: **vim hello.c**  
+**gcc hello.c -o output -D__BIONIC_VERSIONER**  
+finally run the compiled output file: **./hello**  
