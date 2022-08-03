@@ -40,10 +40,12 @@ docker (and docker-compose)
 git  
 
 ## gcc compiler
+### add its-pointless repo  
 echo "deb https://its-pointless.github.io/files/24 termux extras" > $PREFIX/etc/apt/sources.list.d/pointless.list - (for android 5 & 6 use 21 instead of 24)  
 apt-get install gnupg  
 curl -fsSL https://its-pointless.github.io/pointless.gpg | sudo apt-key --keyring /etc/apt/trusted.gpg.d/pointless.gpg add  
 apt-get update  
+### install gcc and switch from clang  
 apt-get install gcc-11  
 setupgcc-11 (to switch back to using clang run setupclang)  
 setup-patchforgcc  
