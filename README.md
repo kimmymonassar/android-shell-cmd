@@ -8,6 +8,8 @@
 `adb shell cmd package list packages -f **name**` // Show specific package and associated file(s)  
 `adb shell input text "text"` // Encode spaces to %s  
 `adb shell input keyevent ENTER`  // Send keyevent, also able to send touch events  
+`adb push C:\Windows\System32\config /sdcard/` // Transfer file from client to host  
+`adb pull /sdcard/video.mp4 C:\Windows\System32\config` // Transfer file from host to client  
 
 ## termux / shell
 `pkg update && pkg upgrade -y`  // Update and upgrade packages, `y` param for auto confirmation  
