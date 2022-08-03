@@ -45,7 +45,7 @@ apt-get install gnupg
 curl -fsSL https://its-pointless.github.io/pointless.gpg | sudo apt-key --keyring /etc/apt/trusted.gpg.d/pointless.gpg add  
 apt-get update  
 apt-get install gcc-11  
-setupgcc-11 (to switch back to using clang run setupclang)
+setupgcc-11 (to switch back to using clang run setupclang)  
 setup-patchforgcc  
 
 ### gcc usage
