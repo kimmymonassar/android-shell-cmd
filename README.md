@@ -32,6 +32,9 @@
 Connect with `ssh username@ipadress -p8022` (Linux/Mac, use Putty or WSL for Windows) Default port is 8022  
 To be able to log in as root edit `$PREFIX/etc/ssh/sshd_config` and add `PermitRootLogin yes`, use same password as set with `passwd` command  
 
+### rclone
+`rclone ls remote:` - list files in root directory of remote drive called `remote`  
+
 ## termux packages
 * tsu  
 * neofetch  
@@ -43,6 +46,7 @@ To be able to log in as root edit `$PREFIX/etc/ssh/sshd_config` and add `PermitR
 * docker - docker-compose also available  
 * git  
 * lz4  
+* rclone
 * ...
 
 # gcc compiler
