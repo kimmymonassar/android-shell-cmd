@@ -22,6 +22,7 @@
 `wget -O - https://raw.githubusercontent.com/its-pointless/its-pointless.github.io/master/setup-pointless-repo.sh | sh` // Download and run remote file, can be used for other filetypes than `.sh`.  
 `file ./foo.c` // Show file info, `--help` for more options  
 `find /etc -type f -iname file1.txt` // Find file in folder /etc, f = file, d = directory. Wildcard can be applied to both name and extention, for example `*.txt` to find all text files in /etc.  
+``
 
 ### termux ssh server setup
 `pkg install openssh`  
