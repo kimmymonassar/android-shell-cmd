@@ -22,6 +22,7 @@
 `wget -O - https://raw.githubusercontent.com/its-pointless/its-pointless.github.io/master/setup-pointless-repo.sh | sh` // Download and run remote file, can be used for other filetypes than `.sh`.  
 `file ./foo.c` // Show file info, `--help` for more options  
 `find /etc -type f -iname file1.txt` // Find file in folder /etc, f = file, d = directory. Wildcard can be applied to both name and extention, for example `*.txt` to find all text files in /etc.  
+`tar cvf - foldername | lz4 - foldername.tar.lz4` // Bundle a folder to a .tar file and then compress it with lz4. Note: if lz4 command is not recognized then call it with the full path. Easiest way to get the path is by using the `find` command.
 
 ### termux ssh server setup
 `pkg install openssh`  
@@ -42,6 +43,7 @@ To be able to log in as root edit `$PREFIX/etc/ssh/sshd_config` and add `PermitR
 * metasploit // Needs pkg install unstable-repo  
 * docker // docker-compose also available  
 * git  
+* lz4  
 * ...
 
 # gcc compiler
