@@ -15,6 +15,7 @@
 `pkg autoclean` - Remove outdated packages  
 `whoami` - Show current user  
 `pwd` - Print working directory  
+`ps -a` - List running processes  
 `chmod +x ./foo.sh` - Make file executable  
 `logcat -s "sshd:*"` - Print logcat for `sshd` process, works for all processes that log to logcat  
 `tsu` - Termux `su` variant, needs tsu package installed. Also enables `sudo` command  
@@ -52,6 +53,7 @@ View [rclone docs](https://rclone.org/commands) for more useful commands
 * git  
 * lz4  
 * rclone
+* proot / proot-distro
 * ...
 
 # gcc compiler
@@ -72,3 +74,13 @@ View [rclone docs](https://rclone.org/commands) for more useful commands
 3. Compile with gcc: `gcc foo.c -o output -D__BIONIC_VERSIONER`  
 4. Run the compiled output file: `./foo`  
 
+# proot / proot-distro  
+1. `proot-distro install archlinux` - install distro, list over available distros can be seen at proot-distro github repo  
+2. `proot-distro login archlinux` - login to newly installed distro  
+3. `pacman -Syu` - `apt-get install && apt-get upgrade` equivalent for pacman  
+4. (optional) `useradd -m your-username -p your-password` - create non-root user. Note: proot does not handle users/groups correctly, so this user can never `sudo`, workaround is `su root` > run command > su your-username  
+5. `pacman -S tigervnc` - install tigervnc for gui access through VNC over local network
+6. `pacman -S xfce4` - install xfce4 desktop environment (other environments like KDE are available)  
+7. `mkdir ~/.vnc && printf "session=xfce4\ndepth=32\ngeometry=1920x1080\nalwaysshared" > ~/.vnc/config` - create .vnc folder and add config  
+8. `vncpasswd` - set password used for connecting to server  
+9. `vncserver :1` - start VNC server showing display 1  
