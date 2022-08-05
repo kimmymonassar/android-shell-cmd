@@ -75,6 +75,7 @@ View [rclone docs](https://rclone.org/commands) for more useful commands
 4. Run the compiled output file: `./foo`  
 
 # proot / proot-distro  
+## installing arch linux and making it available to connect through over network thorugh VNC  
 1. `proot-distro install archlinux` - install distro, list over available distros can be seen at proot-distro github repo  
 2. `proot-distro login archlinux` - login to newly installed distro  
 3. `pacman -Syu` - `apt-get install && apt-get upgrade` equivalent for pacman  
